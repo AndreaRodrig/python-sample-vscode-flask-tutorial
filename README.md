@@ -30,3 +30,27 @@ When you submit a pull request, a CLA-bot automatically determines whether you n
 * This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 * For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 * Contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
+
+## Mis notas
+
+📌 ¿Qué hace el pipeline (azure-pipelines.yml)?
+Se ejecuta automáticamente cada vez que hago un push a la rama main.
+Corre en una máquina virtual Ubuntu limpia.
+Ejecuta el flujo de Integración Continua (CI).
+
+🧩 ¿Qué pasos ejecuta el pipeline?
+Selecciona una versión de Python (de 3.8 a 3.11).
+Instala las dependencias del proyecto desde requirements.txt.
+Instala pytest para ejecutar las pruebas.
+Ejecuta todas las pruebas automáticas con pytest.
+
+🔍 ¿Cómo detecta las pruebas?
+Busca archivos que se llamen test_*.py.
+Dentro de esos archivos, busca funciones que comiencen con test_.
+Ejecuta todas esas funciones como pruebas.
+
+✅ En este caso, encuentra test_test1.py, que contiene:
+def test_mock():
+    assert True
+→ Esta prueba siempre pasa (es un mock).
