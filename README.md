@@ -43,6 +43,7 @@ Corre en una máquina virtual Ubuntu limpia.
 Ejecuta el flujo de Integración Continua (CI).
 
 🧩 ¿Qué pasos ejecuta el pipeline?
+
 Selecciona una versión de Python (de 3.8 a 3.11).
 
 Instala las dependencias del proyecto desde requirements.txt.
@@ -52,6 +53,7 @@ Instala pytest para ejecutar las pruebas.
 Ejecuta todas las pruebas automáticas con pytest.
 
 🔍 ¿Cómo detecta las pruebas?
+
 Busca archivos que se llamen test_*.py.
 
 Dentro de esos archivos, busca funciones que comiencen con test_.
